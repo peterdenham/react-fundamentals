@@ -17,16 +17,15 @@
   }
 
   Message.propTypes = {
-    subject: PropTypes.string.isRequired,
-    greeting: PropTypes.string.isRequired
+    subject: PropTypes.string,
+    greeting: PropTypes.string
   }
 
   const element = (
-    <div className="container">
+    <>
       <Message subject={0} />
       <Message greeting="Goodbye" subject="World" />
-
-    </div>
+    </>
   )
 
   ReactDOM.render(element, document.getElementById('root'))
