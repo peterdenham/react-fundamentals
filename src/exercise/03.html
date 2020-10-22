@@ -9,10 +9,9 @@
   <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
 
   <script type="text/babel">
-    const children = 'Hello World props spread'
+    const children = 'Hello world from JSX'
     const className = 'container'
-    const props = {children, className}
-    const elementJSX = <div {...props} />
+    const elementJSX = <div className='{className}'>{children}</div>
     ReactDOM.render(elementJSX, document.getElementById('root'))
   </script>
 </body>
