@@ -7,14 +7,17 @@
 <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
 <script type="text/babel">
-  function Message({children}) {
+  function message({children}) {
     return <div className="message">{children}</div>
   }
 
+  const helloElement = React.createElement(message, {children: "Hello World"})
+  const goodbyeElement = React.createElement(message, {children: "Goodbye World"})
+
   const element = (
     <div className="container">
-      <Message>Hello World</Message>
-      <Message>Goodbye World</Message>
+      {helloElement}
+      {goodbyeElement}
     </div>
   )
 
